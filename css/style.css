@@ -1,19 +1,24 @@
-/*container - test*/
-.container{
-    background-color: darkcyan;
-}
-
 .row{
     background-color: lightskyblue;
+}
+
+.wrapper{
+    margin-bottom: 20px;
 }
 
 .box{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
+    min-height: 40px;
+    padding: 10px;
     background-color: #006cfa;
     border: 1px solid white;
     font-size: 14px;
     color: white;
+}
+
+.nested{
+    background-color: #00e165;
+    border: 1px solid #006cfa;
 }
