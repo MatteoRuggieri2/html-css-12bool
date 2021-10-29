@@ -1,0 +1,30 @@
+/*BONUS css*/
+
+/*COMMON*/
+h2{
+    font-family: 'Special Elite', Arial;
+}
+
+.wrapper{
+    margin-bottom: 20px;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+    padding: 10px;
+    background-color: #006cfa;
+    border: 1px solid white;
+    font-size: 8px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.nested{
+    background-color: #00e165;
+    border: 1px solid #006cfa;
+}
