@@ -74,3 +74,38 @@
     width: calc( (100% / 12) * 12);
     max-width: calc( (100% / 12) * 12);
 }
+
+/*Col-left-offset*/
+.col-left-offset-1{
+    margin-left: calc( (100% / 12) * 1);
+}
+.col-left-offset-2{
+    margin-left: calc( (100% / 12) * 2);
+}
+.col-left-offset-3{
+    margin-left: calc( (100% / 12) * 3);
+}
+.col-left-offset-4{
+    margin-left: calc( (100% / 12) * 4);
+}
+.col-left-offset-5{
+    margin-left: calc( (100% / 12) * 5);
+}
+.col-left-offset-6{
+    margin-left: calc( (100% / 12) * 6);
+}
+.col-left-offset-7{
+    margin-left: calc( (100% / 12) * 7);
+}
+.col-left-offset-8{
+    margin-left: calc( (100% / 12) * 8);
+}
+.col-left-offset-9{
+    margin-left: calc( (100% / 12) * 9);
+}
+.col-left-offset-10{
+    margin-left: calc( (100% / 12) * 10);
+}
+.col-left-offset-11{
+    margin-left: calc( (100% / 12) * 11);
+}
