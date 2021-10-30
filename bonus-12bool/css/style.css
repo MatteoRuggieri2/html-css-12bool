@@ -1,30 +1,268 @@
 /*BONUS css*/
 
 /*COMMON*/
+body{
+    background-color: black;
+}
+
 h2{
+    display: inline-block;
     font-family: 'Special Elite', Arial;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    box-shadow:  inset 5px  5px 15px white,
+                 inset -5px -5px 15px white,
+                 inset 5px -5px 15px white,
+                 inset -5px  5px 15px white;
+}
+
+img{
+    width: 100%;
 }
 
 .wrapper{
-    margin-bottom: 20px;
+    margin: 20px 0;
+    position: relative;
 }
 
+.orange-color{
+    color: orange;
+}
+
+/*MAIN*/
 .box{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 40px;
     padding: 10px;
-    background-color: #006cfa;
-    border: 1px solid white;
-    font-size: 8px;
-    color: white;
-    font-family: 'Orbitron', sans-serif;
+    background-color: #c07d00;
+    border: 3px solid black;
+    border-radius: 7px;
     text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
     font-weight: 700;
+    transition: transform 0.7s;
+    z-index: 10;
+}
+
+.box:hover{
+    transform: scale(1.03);
+    border: 3px solid #ffa600;
+    box-shadow:  5px  5px 15px #ffa600,
+                -5px -5px 15px #ffa600,
+                 5px -5px 15px #ffa600,
+                -5px  5px 15px #ffa600;
+}
+
+.box.nested:hover{
+    transform: scale(1.1);
+    border: 3px solid black;
+    box-shadow:  5px  5px 15px yellow,
+                -5px -5px 15px yellow,
+                 5px -5px 15px red,
+                -5px  5px 15px red;
 }
 
 .nested{
-    background-color: #00e165;
-    border: 1px solid #006cfa;
+    background-color: #debb79;
+    border: 1px solid #c07d00;
+}
+
+.content{
+    font-size: 8px;
+    color: white;
+    display: none;
+    transition: transform 0.7s;
+}
+
+.box:hover .content{
+    display: inline-block;
+    transform: scale(2);
+}
+
+.nested:hover .nested span{
+    display: inline-block;
+}
+
+.box.nested .content{
+    display: none;
+}
+
+.box.nested:hover .content{
+    display: inline-block;
+}
+
+.ghost-icon{
+    color: white;
+    font-size: 30px;
+}
+
+.section-for-ghost{
+    position: relative;
+}
+
+/*MEGA Ghost*/
+.body-mega-ghost{
+    position: fixed;
+    top: 130px;
+    left: -420px;
+    filter: opacity(0.5);
+    transform: rotate(30deg);
+    animation: mega-ghost 5s;
+    animation-timing-function: linear;
+    z-index: 3;
+
+}
+
+.body-mega-ghost .ghost-icon{
+    font-size: 500px;
+}
+
+@keyframes mega-ghost {
+    0% {
+        top: 130px;
+        left: -420px;
+    }
+
+    10% {
+        top: 100px;
+    }
+
+    25% {
+        top: 60px;
+        transform: rotate(10deg);
+    }
+
+    35% {
+        top: 100px;
+        filter: opacity(0.9);
+    }
+
+    50% {
+        top: 170px;
+        transform: rotate(30deg);
+    }
+
+    65% {
+        top: 100px;
+    }
+
+    75% {
+        top: 60px;
+        filter: opacity(0.5);
+        transform: rotate(10deg);
+    }
+
+    80% {
+        top: 100px;
+    }
+
+    90% {
+        top: 200px;
+        filter: opacity(0.9);
+        transform: rotate(30deg);
+    }
+
+    100% {
+        top: 130px;
+        left: 107%;
+    }
+}
+
+/*tombstone*/
+.tombstone-container{
+    width: 200px;
+    position: fixed;
+    top: 100px;
+    right: 50px;
+    z-index: 2;
+}
+
+.tombstone-container:hover .hands{
+    filter: opacity(1);
+    animation: zombie-hands 2s;
+    animation-timing-function: linear;
+}
+
+@keyframes zombie-hands {
+    0% {
+        top: 146px;
+    }
+
+    10% {
+        top: 43px;
+    }
+
+    30% {
+        top: 43px;
+    }
+
+    100% {
+        top: 146px;
+    }
+
+}
+
+@media screen and (max-width: 1720px) {
+
+    .tombstone-container{
+        display: none;
+    }
+    
+}
+
+.img-container{
+    position: relative;
+}
+
+.hands{
+    transform: scale(0.8);
+    filter: opacity(0);
+    position: absolute;
+    top: 146px;
+    left: 0;
+}
+
+/*section-ghost*/
+.section-ghost{
+    position: fixed;
+    bottom: 0;
+    left: -152px;
+    filter: opacity(0);
+    animation: small-ghost 5s;
+    animation-delay: 8s;
+    animation-iteration-count: infinite;
+    z-index: 2;
+
+}
+
+.section-ghost .ghost-icon{
+    font-size: 200px;
+}
+
+@keyframes small-ghost {
+    
+    20%{
+        transform: translateX(132px); 
+        filter: opacity(1);
+    }
+
+    60%{
+        transform: translateX(133px); 
+        filter: opacity(1);
+    }
+
+    70%{
+        transform: translateX(-152px); 
+        filter: opacity(0);
+    }
+
+    100%{
+        transform: translateX(-153px); 
+        filter: opacity(0);
+    }
+
 }
